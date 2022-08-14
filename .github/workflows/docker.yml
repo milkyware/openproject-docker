@@ -22,12 +22,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        
-      - name: Clone OpenProject
-        uses: GuillaumeFalourd/clone-github-repo-action@v2
         with:
-          owner: opf
-          repository: openproject
+          name: opf/openproject
       
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
