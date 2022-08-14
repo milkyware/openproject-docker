@@ -69,8 +69,8 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           builder: ${{steps.docker-buildx.outputs.name}}
-          context: "{{defaultContext}}"
-          file: "{{defaultContext}}/docker/prod/Dockerfile"
+          context: .
+          file: ./docker/prod/Dockerfile
           platforms: linux/arm64,linux/arm/v7,linux/amd64
           push: true
           labels: ${{steps.docker-metadata.outputs.labels}}
